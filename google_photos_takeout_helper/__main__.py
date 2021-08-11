@@ -678,8 +678,7 @@ def main():
         logger.info('Creating subfolders and dividing files based on date...')
         for_all_files_recursive(
             dir=PHOTOS_DIR,
-            file_function=lambda f: _walk_with_tqdm(copy_to_target_and_divide(f), _copy_bar),
-            filter_fun=lambda f: (is_photo(f) or is_video(f))
+            file_function=lambda f: _walk_with_tqdm(copy_to_target_and_divide(f), _copy_bar)
         )
     else:
         logger.info('Copying all files to one folder...')
